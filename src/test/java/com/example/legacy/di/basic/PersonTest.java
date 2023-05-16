@@ -4,8 +4,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
@@ -19,7 +17,6 @@ class PersonTest {
     static {
         protoTypePerson = applicationContext.getBean("person1", Person.class);
         singletonTypePerson = applicationContext.getBean("person2", Person.class);
-        BeanUtils
     }
 
     @Test
