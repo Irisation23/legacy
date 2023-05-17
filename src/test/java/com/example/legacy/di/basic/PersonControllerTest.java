@@ -12,7 +12,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 
 class PersonControllerTest {
 
-    static final ApplicationContext applicationContext = new GenericXmlApplicationContext("appConfig.xml");
+    static final ApplicationContext applicationContext = new GenericXmlApplicationContext("basic.xml");
     static PersonController personController;
 
     static {

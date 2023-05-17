@@ -14,7 +14,7 @@ class BookStoreTest {
     static BookStore bookStore = new BookStore(new Book("박송주", 7000, "뭐야무야", "뭐야뭐야뭐야뭐야"));
 
     static {
-        ApplicationContext applicationContext = new GenericXmlApplicationContext("bookConfig.xml");
+        ApplicationContext applicationContext = new GenericXmlApplicationContext("basic2.xml");
         book1Bean = applicationContext.getBean("book1", Book.class);
         book2Bean = applicationContext.getBean("book2", Book.class);
         book3Bean = applicationContext.getBean("book3", Book.class);

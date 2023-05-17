@@ -9,7 +9,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 
 class PersonTest {
 
-    static final ApplicationContext applicationContext = new GenericXmlApplicationContext("appConfig.xml");
+    static final ApplicationContext applicationContext = new GenericXmlApplicationContext("basic.xml");
 
     static Person protoTypePerson; // ProtoType
     static Person singletonTypePerson; // SingletonType
