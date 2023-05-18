@@ -1,5 +1,5 @@
-dbms:
-  serverName: '10'
-  serverPort: 10
-  serverUrl: '10'
-  connectionCount: 10
+state-server:
+  serverName: 211.90.0.1:88:oracle
+  serverPort: 8888
+  username: bit
+  password: bit1234
