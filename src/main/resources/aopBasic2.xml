@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  <bean id="commandAttack" class="com.example.legacy.aop.basic2.CommandAttack" scope="singleton"/>
+  <bean id="commandMove" class="com.example.legacy.aop.basic2.CommandMove" scope="singleton"/>
+  <bean id="medicAdvice" class="com.example.legacy.aop.basic2.Medic"></bean>
+  <bean id="targetMarine" class="com.example.legacy.aop.basic2.Marine">
+    <property name="command" ref="commandAttack"></property>
+  </bean>
+
+  <bean id="marine" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="target" ref="targetMarine"></property>
+    <property name="interceptorNames">
+      <list>
+        <value>medicAdvice</value>
+      </list>
+    </property>
+
+  </bean>
+
+
+</beans>
+
+
+
+
+
+
+
