@@ -29,7 +29,7 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	// aspect 설정 추가 //
 	// https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
-	runtimeOnly group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.19'
+	implementation group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.19'
 	// aspect 설정 추가 //
 }
 

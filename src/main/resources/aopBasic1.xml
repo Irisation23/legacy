@@ -11,13 +11,17 @@
   <bean id="mySqlDao" class="com.example.legacy.aop.basic1.MySqlDao" />
   <bean id="beforeAdvice" class="com.example.legacy.aop.basic1.BeforeAdvice" />
   <bean id="afterAdvice" class="com.example.legacy.aop.basic1.AfterAdvice" />
+  <bean id="afterReturningAdviceV1" class="com.example.legacy.aop.basic1.AfterReturningAdviceV1" />
 
   <aop:config>
     <aop:aspect id="before" ref="beforeAdvice">
       <aop:before method="beforeMethod" pointcut="execution(public * com.example.legacy.aop.basic1.Dao*.*())" />
     </aop:aspect>
     <aop:aspect id="after" ref="afterAdvice">
-      <aop:before method="afterMethod" pointcut="execution(public * com.example.legacy.aop.basic1.Dao*.*())" />
+      <aop:after method="afterMethod" pointcut="execution(public * com.example.legacy.aop.basic1.Dao*.*())" />
+    </aop:aspect>
+    <aop:aspect id="after-returning" ref="afterReturningAdviceV1">
+      <aop:after-returning method="afterReturning" pointcut="execution(public * com.example.legacy.aop.basic1.Dao*.*())" />
     </aop:aspect>
   </aop:config>
 </beans>
